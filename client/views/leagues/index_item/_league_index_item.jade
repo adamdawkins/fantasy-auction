@@ -1,0 +1,9 @@
+template(name="LeagueIndexItem")
+  .league.item
+    = name
+    if user_is_in_league
+      a.ui.primary.icon.button(href="{{pathFor 'leagues.show'}}")
+        i.checkmark.icon
+        |You're in!
+    else
+      .ui.primary.join.button Join

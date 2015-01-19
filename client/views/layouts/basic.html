@@ -1,0 +1,19 @@
+<template name="BasicLayout">
+  <div class="ui page grid">
+    <div class="column">
+      <div class="ui menu">
+        <a class="item" href="">Leagues</a>
+        <a class="item" href="">players</a>
+        <div class="right menu">
+          <div class="item">
+            <i class="user icon"></i>
+            {{#with current_user}}
+              {{username}}
+            {{/with}}
+          </div>
+        </div>
+      </div>
+      {{> yield}} 
+    </div>
+  </div>
+</template>
